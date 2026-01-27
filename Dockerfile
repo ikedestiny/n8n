@@ -6,6 +6,3 @@ WORKDIR /data
 
 # Expose the default n8n port
 EXPOSE 5678
-
-# Start n8n
-CMD ["n8n", "start"]
