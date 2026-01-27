@@ -1,6 +1,7 @@
 FROM n8nio/n8n:latest
 
 USER root
-RUN apt-get update && apt-get install -y curl jq
+# Use Alpine package manager
+RUN apk add --no-cache curl jq
 USER node
 
