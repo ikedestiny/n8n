@@ -1,5 +1,4 @@
-FROM n8nio/n8n:latest-python
+FROM n8nio/n8n:latest
 WORKDIR /data
 EXPOSE 5678
-# Default entrypoint is fine
-
+# Add any additional configuration or setup here
