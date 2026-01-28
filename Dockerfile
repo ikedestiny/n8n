@@ -1,8 +1,10 @@
-# Use the official n8n image
 FROM n8nio/n8n:latest
 
-# Set working directory
-WORKDIR /data
+# Needed only if using Python nodes in internal mode
+USER root
+RUN apk add --no-cache python3 py3-pip
+USER node
 
-# Expose the default n8n port
+WORKDIR /data
 EXPOSE 5678
+# Default entrypoint is fine
